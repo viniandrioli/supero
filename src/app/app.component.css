@@ -1,0 +1,215 @@
+/* ng2-smart-table*/
+
+  
+  :host /deep/ a.ng2-smart-action-delete-delete {
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    transform: translate3d(0,0,0);
+    transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    background-color: #f44336;
+    color: #fff;
+    margin-left: 8px;
+    margin-top: 10px
+  }
+
+  :host /deep/ a.ng2-smart-action-edit-edit,
+  :host /deep/ a.ng2-smart-action-edit-cancel,
+  :host /deep/ a.ng2-smart-action-edit-save,
+  :host /deep/ a.ng2-smart-action-add-create,
+  :host /deep/ a.ng2-smart-action-add-cancel  {
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    transform: translate3d(0,0,0);
+    transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    margin-top: 10px;
+  }
+
+  :host /deep/ a.ng2-smart-action-add-add {
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    transform: translate3d(0,0,0);
+    transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    background-color: #3f51b5;
+    color: #fff;
+    float: left;
+  }
+ 
+:host /deep/ ng2-smart-table table {
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12) !important;
+  height: 350px;
+}
+
+
+:host /deep/ ng2-smart-table tbody > tr > td {
+  border-bottom: 1px solid grey;
+  font-size: .875em;
+  padding: .375em .75em;
+}
+
+:host /deep/ ng2-smart-row {
+  border-bottom: 1px solid black !important;
+}
+
+:host /deep/ ng2-smart-row > tr {
+  border-bottom: 1px solid black !important;
+}
+
+:host /deep/ ng2-smart-row > td {
+  border-bottom: 1px solid black !important;
+}
+
+:host /deep/ ng2-smart-table_cell {
+  border-bottom: 1px solid red !important;
+}
+
+:host /deep/ ng2-smart-table tbody > tr > td > a {
+  color: grey;
+  text-decoration: none;
+  font-size: small;
+  font-weight: bold;
+}
+
+:host /deep/ ng2-smart-table tbody > tr > th > a {
+  color: grey;
+  text-decoration: none;
+  font-size: small;
+  font-weight: bold;
+}
+
+/* clickable paging number */
+:host /deep/ a.ng2-smart-page-link.page-link {
+  height: 22px;
+  width: 40px;
+  text-align: center;
+  vertical-align: middle;
+  color: royalblue;
+  font-weight: bold;
+  line-height: 6px;
+}
+/* selected paging number */
+:host /deep/ span.ng2-smart-page-link.page-link {
+  height: 22px;
+  width: 40px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  font-weight: bold;
+  line-height: 6px;
+}
+
+:host /deep/ span.ng2-smart-page-item.page-item.disabled {
+  height: 22px;
+  width: 40px;
+  text-align: center;
+  vertical-align: middle;
+  color: grey;
+  font-weight: bold;
+  line-height: 6px;
+}
+
+/* previous paging button */
+:host /deep/ a.ng2-smart-page-link.page-link.page-link-prev {
+  height: 22px;
+  width: 40px;
+  text-align: center;
+  vertical-align: middle;
+  color: royalblue;
+  font-weight: bold;
+  line-height: 6px;
+}
+
+/* previous paging button disabled */
+:host /deep/ span.ng2-smart-page-link.page-link.page-link-prev.disabled {
+  height: 22px;
+  width: 40px;
+  text-align: center;
+  vertical-align: middle;
+  color: grey;
+  font-weight: bold;
+  line-height: 6px;
+}
+
+/* next paging button */
+:host /deep/ a.ng2-smart-page-link.page-link.page-link-next {
+  height: 22px;
+  width: 40px;
+  text-align: center;
+  vertical-align: middle;
+  color: royalblue;
+  font-weight: bold;
+  line-height: 6px;
+}
+
+/* next paging button */
+:host /deep/ span.ng2-smart-page-link.page-link.page-link-next.disabled {
+  height: 22px;
+  width: 40px;
+  text-align: center;
+  vertical-align: middle;
+  color: grey;
+  font-weight: bold;
+  line-height: 6px;
+}
+
+:host /deep/ .hd-cl-1-td:nth-child(1) {
+  display: none;
+}
