@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,8 +24,19 @@ namespace Supero.Data.BusinessLogic.Implementor
             Mapper.CreateMap<Supero.Model.TaskListItems, Persistence.TaskList>();
         }
 
+    public Persistence.TaskListResponse GetTaskList()
+    {
+      taskListRepository.SetContextAsMaster();
 
-        public void AddTaskList(TaskListItems items)
+      var items = taskListRepository.GetAll().ToList();
+
+    
+      var response = new Persistence.TaskListResponse() { Tasklist = items };
+
+        return response;
+     }
+
+    public void AddTaskList(TaskListItems items)
         {
             taskListRepository.SetContextAsMaster();
 

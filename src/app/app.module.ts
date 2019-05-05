@@ -3,27 +3,33 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { AppService } from './app.service';
+import { AppRoutingModule } from './app-routing.module';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { TasklistComponent } from '../components/tasklist/tasklist.component';
+import { TasklistService } from '../components/tasklist/tasklist.service';
+import { HomeComponent } from '../components/home/home.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    TasklistComponent,
+    AppComponent,
+    HomeComponent
     
   ],
   imports: [
     BrowserModule,
     Ng2SmartTableModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
 
   ],
   providers: [
-    AppService
+    TasklistService
   ],
   entryComponents: [
-    
+    TasklistComponent
   ],
   bootstrap: [AppComponent]
 })

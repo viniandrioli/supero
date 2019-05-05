@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -22,6 +22,15 @@ namespace Supero.Controllers
             {
                 return ApiContainer.GetInstance<ITaskList>();
             }
+        }
+
+        [Route("gettask")]
+        [HttpGet]
+        public Persistence.TaskListResponse get()
+        {
+            var response = TaskListService.GetTaskList();
+
+            return response;
         }
 
 
