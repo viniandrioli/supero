@@ -8,7 +8,6 @@ import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'tasklist',
-  templateUrl: './tasklist.component.html',
   styleUrls: ['./tasklist.component.css'],
   providers: [DatePipe],
   template: `
