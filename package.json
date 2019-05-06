@@ -29,7 +29,7 @@
     "core-js": "^2.5.4",
     "express": "^4.16.4",
     "hammerjs": "^2.0.8",
-    "smart-table": "https://github.com/viniandrioli/smart-table-example-modified/tarball/master",
+    "ng2-smart-table": "https://github.com/viniandrioli/smart-table-example-modified/tarball/master",
     "path": "^0.12.7",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.5.1",
