@@ -29,9 +29,11 @@ export class TasklistComponent {
     private datePipe: DatePipe) 
   {}
 
-  ngOnInit() {
+  ngAfterContentInit() {
     this.getData()
   }
+
+  
   
   source: LocalDataSource;
 
@@ -84,19 +86,17 @@ export class TasklistComponent {
 
 
   getData() {
-
-
     this.source = new LocalDataSource();
 
     this.tasklistService.gettasks().subscribe((data) =>
     {
 
-      for(let i=0; i < data.Tasklist.length; i++) {  
-        data.Tasklist[i].CreationDate = data.Tasklist[i].CreationDate.replace(/T.*$/,"");
-        data.Tasklist[i].LastEdit = data.Tasklist[i].LastEdit.replace(/T.*$/,"");
-        data.Tasklist[i].Conclusion = data.Tasklist[i].Conclusion.replace(/T.*$/,"");
-        data.Tasklist[i].RemovedOn = data.Tasklist[i].RemovedOn.replace(/T.*$/,"");
-      }
+      data.Tasklist.forEach(x => {
+        x.CreationDate = x.CreationDate.replace(/T.*$/,"");
+        x.LastEdit = x.LastEdit.replace(/T.*$/,"");
+        x.Conclusion = x.Conclusion.replace(/T.*$/,"");
+        x.RemovedOn = x.RemovedOn.replace(/T.*$/,"");
+      });
 
       this.source.load(data.Tasklist);
 
@@ -123,7 +123,6 @@ export class TasklistComponent {
 
   onCreateConfirm(event) {
     if (window.confirm('Are you sure you want to create?')) {
-      debugger
       this.tasklistService.addtask(event.newData).subscribe();
       event.confirm.resolve(event.newData);
     } else {
