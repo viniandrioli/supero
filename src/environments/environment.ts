@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  apiEndpoint: 'http://localhost:59067/api/',
+  apiEndpoint: 'https://superowebapi20190505083657.azurewebsites.net/',
   oldWebUrl: 'http://localhost:59067/',
   domain: 'localhost'
 };

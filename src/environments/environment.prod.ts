@@ -1,8 +1,6 @@
 export const environment = {
   production: false,
-  apiEndpoint: 'https://localhost:44302/api/',
+  apiEndpoint: 'https://superowebapi20190505083657.azurewebsites.net/api/',
   oldWebUrl: 'https://localhost:44301/',
-  // apiEndpoint: 'https://api-prod.eemovel.com.br/',
-  // oldWebUrl: 'https://plataforma.eemovel.com.br/',
   domain: 'localhost'
 };
