@@ -32,6 +32,6 @@ export class TasklistService {
   }
 
   deletetask(data): Observable<any> {  
-    return this.http.delete<Tasklist>(`${AppConfig.apiEndpoint}tasklist/delete/${(data.id)}`, data)  
+    return this.http.delete<Tasklist>(`${AppConfig.apiEndpoint}tasklist/delete/${(data.Id)}`, data)  
   }
 }
