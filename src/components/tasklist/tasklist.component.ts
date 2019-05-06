@@ -48,26 +48,18 @@ export class TasklistComponent {
       },
       CreationDate: {
         title: 'Creation Date',
-        type: "date",
-        // valuePrepareFunction: (created) => {
-        //   return this.datePipe.transform(new Date(created), 'dd MMM yyyy');
-        // }
+        type: "date"
       },
       LastEdit: {
         title: 'Edit On',
-        type: "date",
-        // valuePrepareFunction: (created) => {
-        //   return this.datePipe.transform(new Date(created), 'dd MMM yyyy');
-        // }
+        type: "date"
+
     
       },
       Conclusion: {
         title: 'Conclusion',
-        type: "date",
-        // valuePrepareFunction: (created) => {
-        //   return this.datePipe.transform(new Date(created), 'dd MMM yyyy');
-        // }
- 
+        type: "date"
+
       }
       
     },
@@ -90,19 +82,9 @@ export class TasklistComponent {
 
   
 
-  // // data = [
-  // //   {
-  // //     title: "Task1",
-  // //     status: "done",
-  // //     creationdate: "2012-12-25",
-  // //     lastedit: "2012-12-25",
-  // //     conclusion: "2012-12-25"
-  // //   },
-  // // ];
 
   getData() {
-    debugger;
-    var arrayDt;
+
 
     this.source = new LocalDataSource();
 
@@ -115,16 +97,6 @@ export class TasklistComponent {
         data.Tasklist[i].Conclusion = data.Tasklist[i].Conclusion.replace(/T.*$/,"");
         data.Tasklist[i].RemovedOn = data.Tasklist[i].RemovedOn.replace(/T.*$/,"");
       }
-
-      // // this.data.push(
-      // //   {
-      // //     title: "Task3",
-      // //     status: "done",
-      // //     creationdate: "2012-12-25",
-      // //     lastedit: "2012-12-25",
-      // //     conclusion: "2012-12-25"
-      // //   },
-      // // );
 
       this.source.load(data.Tasklist);
 
