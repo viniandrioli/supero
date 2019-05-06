@@ -12,12 +12,7 @@ app.get('/*', function(req,res) {
 res.sendFile(path.join(__dirname+'/dist/index.html'));
 });
 
-
-// Start the app by listening on the default Heroku port
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`)
-    console.log('Para derrubar o servidor: ctrl + c');
-  })
+app.listen(process.env.PORT || 5000)
 
 
 
